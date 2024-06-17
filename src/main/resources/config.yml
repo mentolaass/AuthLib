@@ -1,0 +1,15 @@
+messages:
+  register:
+    require: "Для входа на сервер используйте команду: /register <pass>"
+    success: "Успешная регистрация"
+  login:
+    require: "Для входа на сервер используйте команду: /auth <pass>"
+    success: "Успешный вход"
+    failed: "Неверный пароль. Попробуйте еще раз."
+
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  pass: root
+  name: test

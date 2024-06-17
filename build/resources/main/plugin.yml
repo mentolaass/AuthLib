@@ -1,0 +1,14 @@
+name: AuthLib
+version: '1.0'
+main: ru.mentola.authlib.AuthLib
+api-version: '1.20'
+commands:
+  auth:
+    description: "Authorization"
+    aliases:
+      - log
+      - login
+  register:
+    description: "Register"
+    aliases:
+      - reg
