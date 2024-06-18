@@ -2,10 +2,20 @@ messages:
   register:
     require: "Для входа на сервер используйте команду: /register <pass>"
     success: "Успешная регистрация"
+    failed: "Произошла ошибка при регистрации. Попробуйте еще раз."
+    no-require: "Вам не нужна регистрация."
+    usage: "Правильное использование: /register <pass>"
+    invalid-password-length: "Неверная длина пароля, от %min_len% до %max_len%"
   login:
     require: "Для входа на сервер используйте команду: /auth <pass>"
     success: "Успешный вход"
     failed: "Неверный пароль. Попробуйте еще раз."
+    no-require: "Вам не нужна авторизация."
+    usage: "Правильное использование: /auth <pass>"
+
+core:
+  max-length-pass: 12
+  min-length-pass: 5
 
 mysql:
   host: 127.0.0.1

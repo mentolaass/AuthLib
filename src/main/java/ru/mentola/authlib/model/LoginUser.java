@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @AllArgsConstructor @Getter
-public final class DataUser {
+public final class LoginUser {
     private final String username;
     private final String uuid;
     private final String pass;

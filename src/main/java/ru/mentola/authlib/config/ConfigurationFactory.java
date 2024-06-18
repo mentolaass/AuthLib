@@ -2,7 +2,6 @@ package ru.mentola.authlib.config;
 
 import lombok.experimental.UtilityClass;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import ru.mentola.authlib.config.api.ConfigurationModel;
 import ru.mentola.authlib.config.api.ConfigurationPath;
@@ -36,7 +35,8 @@ public class ConfigurationFactory {
 
     private List<Class<?>> getTypesFields(final List<Field> fields) {
         final List<Class<?>> classes = new ArrayList<>();
-        fields.forEach((field) -> classes.add(field.getType()));
+        for (final Field field : fields)
+            classes.add(field.getType());
         return classes;
     }
 

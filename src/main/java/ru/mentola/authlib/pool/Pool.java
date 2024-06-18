@@ -8,11 +8,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public abstract class Pool<T> {
-    private final List<T> cache;
-
-    public Pool() {
-        this.cache = new ArrayList<>();
-    }
+    private final List<T> cache = new ArrayList<>();
 
     public T get(final int index) {
         return this.cache.get(index);
@@ -35,6 +31,16 @@ public abstract class Pool<T> {
     }
 
     public void add(final T t) {
+        if (this.cache.contains(t))
+            return;
         this.cache.add(t);
+    }
+
+    public void clear() {
+        this.cache.clear();
+    }
+
+    public boolean contains(final T t) {
+        return this.cache.contains(t);
     }
 }

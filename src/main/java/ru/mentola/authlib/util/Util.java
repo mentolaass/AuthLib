@@ -7,9 +7,13 @@ import java.nio.charset.StandardCharsets;
 
 @UtilityClass
 public class Util {
-    public String processHash(final String username, final String hashPass) {
+    public String processHash(final String pass) {
+        return getSHA256(pass);
+    }
+
+    private String getSHA256(final String str) {
         return Hashing.sha256()
-                .hashString(username + hashPass, StandardCharsets.UTF_8)
+                .hashString(str, StandardCharsets.UTF_8)
                 .toString();
     }
 }

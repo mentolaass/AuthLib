@@ -12,3 +12,5 @@ commands:
     description: "Register"
     aliases:
       - reg
+depend:
+  - packetevents
